@@ -1,0 +1,7 @@
+yarn.lock
+package-lock.json
+node_modules
+.next
+.react-email
+.vercel
+prisma/migrations/
