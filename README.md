@@ -1,7 +1,7 @@
 # Personal-Finance-Management-System (PFMS)
 
 <p align="center">
-  PFMS is an open-source expense tracker application to effortlessly track and manage your expenses.
+  PFMS is an expense tracker application to effortlessly track and manage your expenses.
 </p>
 
 <p align="center">
@@ -14,27 +14,27 @@
 
 ## Introduction
 
-Personal Finance Management System (PFMS) is an open-source application to effortlessly track and manage your incomes, expenses, investments, and subscriptions.
+Personal Finance Management System (PFMS) is an application to effortlessly track and manage your incomes, expenses, investments, budgets and subscriptions.
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) – framework
-- [Components](https://ui.shadcn.com/) – ui-components
-- [Tailwind](https://tailwindcss.com/) – CSS
-- [Supabase](https://supabase.com/) – database
-- [Vercel](https://vercel.com/) – hosting
-- [Resend](https://resend.com/) – emails
+- [Next.js](https://nextjs.org/) – Full-Stack MVC framework
+- [Components](https://ui.shadcn.com/) – External Library for ui-components
+- [Tailwind](https://tailwindcss.com/) – CSS library
+- [Supabase](https://supabase.com/) – ORM/Database
+- [Vercel](https://vercel.com/) – Application Hosting
+- [Resend](https://resend.com/) – Email Marketing Service
 
 ## Implementation
 
-- PFMS is built using [NextJs](https://nextjs.org) from scratch.
-- [Postgresql](https://www.postgresql.org/) is used as the ORM for easily communicating with the database for storing user, subscription data, etc. You can refer to the Prisma schema [here](/prisma/schema.prisma).
-- [Supabase](https://supabase.com/) is an open-source Firebase alternative, the data is stored in the Postgres database (private data are encrypted) and uses a magic link for authentication provided by supabase.
-- [LemonSqueezy](https://lemonsqueezy.com/) is used as the payment system. Its implementation is super simple.
+- PFMS is developed from the ground up using [NextJs](https://nextjs.org).
+- For database interactions, such as storing user and subscription data, [Postgresql](https://www.postgresql.org/) serves as the ORM. The Prisma schema can be accessed [here](/prisma/schema.prisma).
+- [Supabase](https://supabase.com/) a free alternative to Firebase, stores data in a Postgres database, encrypts private data, and provides authentication via a magic link.
+- For handling payments, [LemonSqueezy](https://lemonsqueezy.com/) is utilized for its straightforward implementation.
 
 ## Routes
 
-| Path      | Local                     |
+| Path      | Route URL                 |
 | --------- | ----------------------    | 
 | Home      | /                         |                    
 | Signup    | app.localhost:3000/signup |  
