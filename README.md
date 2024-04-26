@@ -1,4 +1,4 @@
-# Personal-Finance-Management-System (PFMS)
+# Personal Finance Management System (PFMS)
 
 <p align="center">
   PFMS is an expense tracker application to effortlessly track and manage your expenses.
