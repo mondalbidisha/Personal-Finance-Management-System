@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#implementation"><strong>Implementation</strong></a> ·
-  <a href="#routes"><strong>App Routes</strong></a> ·
+  <a href="#introduction">> . <strong>Introduction</strong></a>
+  <a href="#tech-stack"> . <strong>Tech Stack</strong></a>
+  <a href="#implementation"> . <strong>Implementation</strong></a>
+  <a href="#routes"> . <strong>App Routes</strong></a>
 </p>
 <br/>
 
