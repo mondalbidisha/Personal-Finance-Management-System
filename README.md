@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="#introduction">> . <strong>Introduction</strong></a>
-  <a href="#tech-stack"> . <strong>Tech Stack</strong></a>
-  <a href="#implementation"> . <strong>Implementation</strong></a>
-  <a href="#routes"> . <strong>App Routes</strong></a>
+  * <a href="#introduction"><strong>Introduction</strong></a> *
+  * <a href="#tech-stack"><strong>Tech Stack</strong></a> *
+  * <a href="#implementation"><strong>Implementation</strong></a> *
+  * <a href="#routes"><strong>App Routes</strong></a> *
 </p>
 <br/>
 
@@ -32,7 +32,7 @@ Personal Finance Management System (PFMS) is an application to effortlessly trac
 - [Supabase](https://supabase.com/) a free alternative to Firebase, stores data in a Postgres database, encrypts private data, and provides authentication via a magic link.
 - For handling payments, [LemonSqueezy](https://lemonsqueezy.com/) is utilized for its straightforward implementation.
 
-## Routes
+## Application Routes
 
 | Path      | Route URL                 |
 | --------- | ----------------------    | 
