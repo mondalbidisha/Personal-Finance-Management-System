@@ -34,58 +34,97 @@ model subscriptions {
   user         users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
+model Transaction {
+  id         String   @id @default(uuid())
+  /// @encrypted
+  name       String
+  /// @encrypted
+  notes      String?
+  /// @encrypted
+  price      String   @default("0")
+  date       String
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+  user_id    String   @db.Uuid
+  nameHash   String?
+  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("transactions") // Optional, defines the table name in the database
+}
+
+// Expenses inherits from Transaction
 model expenses {
-  id         String   @id @default(uuid())
-  /// @encrypted
-  name       String
-  /// @encrypted
-  notes      String?
-  /// @encrypted
-  price      String   @default("0")
-  paid_via   String   @default("")
-  category   String
-  date       String
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
-  user_id    String   @db.Uuid
-  nameHash   String?
-  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  paid_via        String          @default("")
+  category        String?
+  categoryId      String?         @db.Uuid
+  expenseCategory ExpenseCategory? @relation(fields: [categoryId], references: [id])
+
+  budgetId        String?         @db.Uuid
+  budget          budget?         @relation(fields: [budgetId], references: [id])
+
+  @@map("expenses")
 }
 
+// Income inherits from Transaction
 model income {
-  id         String   @id @default(uuid())
-  /// @encrypted
-  name       String
-  /// @encrypted
-  notes      String?
-  /// @encrypted
-  price      String   @default("0")
-  category   String
-  date       String
-  created_at DateTime @default(now()) @db.Timestamptz(6)
-  updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
-  user_id    String   @db.Uuid
-  nameHash   String?
-  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  categoryId     String?         @db.Uuid
+  incomeCategory IncomeCategory? @relation(fields: [categoryId], references: [id])
+
+  budgetId       String?         @db.Uuid
+  budget         budget?         @relation(fields: [budgetId], references: [id])
+
+  @@map("income")
 }
 
+// Investments inherits from Transaction
 model investments {
-  id         String   @id @default(uuid())
-  /// @encrypted
-  name       String
-  /// @encrypted
-  notes      String?
-  /// @encrypted
-  price      String   @default("0")
   /// @encrypted
   units      String   @default("0")
   category   String
-  date       String
+
+  @@map("investments")
+}
+
+// Budget model with associations
+model budget {
+  id         String     @id @default(uuid())
+  amount     Decimal
+  period     String     // e.g., "Monthly", "Annual"
+  startDate  DateTime   // Start date of the budget period
+  endDate    DateTime   // End date of the budget period
+  category   String?    // Optional, to specify if the budget is for specific categories
+  created_at DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at DateTime   @default(now()) @updatedAt @db.Timestamptz(6)
+  user_id    String     @db.Uuid
+  user       users      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  expenses   expenses[]
+  income     income[]
+
+  @@map("budgets")
+}
+
+// Base Category model
+model Category {
+  id         String   @id @default(uuid())
+  name       String
   created_at DateTime @default(now()) @db.Timestamptz(6)
   updated_at DateTime @default(now()) @updatedAt @db.Timestamptz(6)
-  user_id    String   @db.Uuid
-  nameHash   String?
-  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@abstract
+}
+
+// Derived model for Income Category
+model IncomeCategory extends Category {
+  incomes   income[]
+
+  @@map("income_categories")
+}
+
+// Derived model for Expense Category
+model ExpenseCategory extends Category {
+  expenses  expenses[]
+
+  @@map("expense_categories")
 }
 
 model users {
