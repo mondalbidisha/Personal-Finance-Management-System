@@ -69,7 +69,7 @@ function DatePickerSelect({ onChange, selectedValue }: { onChange: any; selected
 		<Select
 			value={selectedValue}
 			onValueChange={(selected) => {
-				switch (selected) {
+				switcher (selected) {
 					case 'tdy': {
 						onChange({ selected, from: addDays(new Date(), 0), to: addDays(new Date(), 0) });
 						break;
