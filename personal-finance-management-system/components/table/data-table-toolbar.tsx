@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 import { Button } from 'components/ui/button';
 import { Input } from 'components/ui/input';
 
-import { exportTableToCsv } from 'lib/export';
+import { tabletocsvexport } from 'lib/export';
 import { formatDate } from 'lib/formatter';
 
 import { dateFormat } from 'constants/date';
@@ -75,7 +75,7 @@ export default function DataTableToolbar<TData>(props: DataTableToolbarProps<TDa
 						variant="outline"
 						onClick={() => {
 							toast.info(messages.export);
-							exportTableToCsv(
+							tabletocsvexport(
 								`${filename} ${formatDate({ date: format(new Date(), dateFormat), locale: user.locale })}.csv`
 							);
 						}}

@@ -52,23 +52,23 @@ export const calculatePaidDates = (datum: any, start: string, end: string): Arra
 
 	const hasValidCancelledAt = !datum.active && datum.cancelled_at !== null && isValid(new Date(datum.cancelled_at));
 	const startDate = new Date(datum.date);
-	const rangeStartDate = new Date(start);
+	const rangeofstartdate = new Date(start);
 	const rangeEndDate = hasValidCancelledAt ? new Date(datum.cancelled_at) : new Date(end);
 	let startDateCount = 1;
 	let noOfPaidDurations = 0;
 
-	if (isAfter(startDate, rangeStartDate) && isAfter(startDate, new Date(end))) {
-		return [];
+	if (isAfter(startDate, rangeofstartdate) && isAfter(startDate, new Date(end))) {
+			return [];
 	}
 
 	if (datum.paid === 'monthly') {
-		if (!isFuture(startDate)) {
-			noOfPaidDurations = differenceInMonths(rangeEndDate, startDate) + startDateCount;
-		}
+			if (!isFuture(startDate)) {
+				noOfPaidDurations = differenceInMonths(rangeEndDate, startDate) + startDateCount;
+			}
 	} else {
-		if (!isFuture(startDate)) {
-			noOfPaidDurations = differenceInYears(rangeEndDate, startDate) + startDateCount;
-		}
+			if (!isFuture(startDate)) {
+				noOfPaidDurations = differenceInYears(rangeEndDate, startDate) + startDateCount;
+			}
 	}
 
 	if (noOfPaidDurations < 0) return [];
@@ -77,5 +77,5 @@ export const calculatePaidDates = (datum: any, start: string, end: string): Arra
 		.map((_, index) => {
 			return addMonths(startDate, index);
 		})
-		.filter((rD) => rD >= rangeStartDate && rD <= rangeEndDate);
+		.filter((rD) => rD >= rangeofstartdate && rD <= rangeEndDate);
 };
