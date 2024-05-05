@@ -99,4 +99,4 @@ export const checkAuth = async (callback: Function, isGetMethod = true) => {
 		} else {
 			return NextResponse.json({ message: messages.account.unauthorized }, { status: 401 });
 		}
-};
+};+
