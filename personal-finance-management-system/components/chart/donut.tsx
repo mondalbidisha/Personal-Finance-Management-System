@@ -6,7 +6,7 @@ import { DonutChart, Legend } from '@tremor/react';
 
 import { useUser } from 'components/context/auth-provider';
 import { useOverview } from 'components/context/overview-provider';
-import ChartLoader from 'components/loader/chart';
+import chartloader from 'components/loader/chart';
 
 import { extractSubscriptions, extractSubscriptionsCategories } from 'lib/extractor';
 import { formatCurrency } from 'lib/formatter';
@@ -42,7 +42,7 @@ export default function Donut() {
 	);
 
 	if (loading) {
-		return <ChartLoader className="h-[340px]" type="donut" />;
+		return <chartloader className="h-[340px]" type="donut" />;
 	}
 
 	if (!chartData.length) {

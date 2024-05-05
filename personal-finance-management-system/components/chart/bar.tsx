@@ -6,7 +6,7 @@ import { BarChart } from '@tremor/react';
 
 import { useUser } from 'components/context/auth-provider';
 import { useOverview } from 'components/context/overview-provider';
-import ChartLoader from 'components/loader/chart';
+import chartloader from 'components/loader/chart';
 
 import { extractChartAxis, extractExpenses, extractExpensesCategory } from 'lib/extractor';
 import { formatCurrency } from 'lib/formatter';
@@ -45,7 +45,7 @@ export default function ExpesenseChart() {
 	const [maxXAxisValue] = useMemo<Array<any>>(() => extractChartAxis(data.expenses), [data.expenses]);
 
 	if (loading) {
-		return <ChartLoader className="h-[340px]" type="bar" />;
+		return <chartloader className="h-[340px]" type="bar" />;
 	}
 
 	if (!chartData.length) {
