@@ -24,7 +24,7 @@ const categories = Object.keys(expensesCategory)
 		value: categoryKey,
 	}));
 
-export default function ExpenseTable() {
+export default function user_exp_table() {
 	const [selected, setSelected] = useState({});
 	const { data, loading, filter, mutate } = useData();
 	const user = useUser();

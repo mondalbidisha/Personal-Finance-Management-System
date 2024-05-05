@@ -10,7 +10,7 @@ import { formatCurrency, formatDate } from 'lib/formatter';
 
 import { expensesCategory, expensesPay } from 'constants/categories';
 
-export type Expenses = {
+export type User_expenses = {
 	name: string;
 	date: string;
 	price: string;
@@ -29,7 +29,7 @@ declare module '@tanstack/table-core' {
 	}
 }
 
-export const columns: ColumnDef<Expenses>[] = [
+export const columns: ColumnDef<User_expenses>[] = [
 	{
 		accessorKey: 'name',
 		header: ({ column }) => <DataTableColumnHeader column={column} title="name" />,

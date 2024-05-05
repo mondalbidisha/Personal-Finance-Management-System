@@ -7,7 +7,7 @@ import CardLoader from 'components/loader/card';
 
 import { formatCurrency } from 'lib/formatter';
 
-export default function IncomeSummary() {
+export default function User_income_sum() {
 	const user = useUser();
 	const { data = [], loading = true } = useData();
 

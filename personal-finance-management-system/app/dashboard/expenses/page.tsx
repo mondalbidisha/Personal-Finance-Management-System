@@ -4,7 +4,7 @@ import LayoutHeader from 'components/layout/header';
 import ExpensesSummary from './summary';
 import ExpenseTable from './table';
 
-const title = 'Expense.fyi – Expenses';
+const title = 'PFMS – Expenses';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {

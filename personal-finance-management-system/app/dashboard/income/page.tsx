@@ -4,7 +4,7 @@ import LayoutHeader from 'components/layout/header';
 import IncomeSummary from './summary';
 import IncomeTable from './table';
 
-const title = 'Expense.fyi – Income';
+const title = 'PFMS – Income';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {
@@ -12,7 +12,7 @@ export const metadata = {
 	description,
 };
 
-export default async function Page() {
+export default async function Income_page() {
 	return (
 		<>
 			<LayoutHeader title="income" />

@@ -8,7 +8,7 @@ export type IncomeData = {
 	date: string;
 };
 
-export const addIncome = async (data: IncomeData) => {
+export const user_add_income = async (data: IncomeData) => {
 	const res = await fetch(apiUrls.income.add, { method: 'POST', body: JSON.stringify(data) });
 	if (!res.ok) {
 		const error = await res.json();
@@ -17,12 +17,12 @@ export const addIncome = async (data: IncomeData) => {
 	return await res.json();
 };
 
-export const deleteIncome = async (id: string) => {
+export const user_del_income = async (id: string) => {
 	const res = await fetch(apiUrls.income.modify, { method: 'DELETE', body: JSON.stringify({ id: [id] }) });
 	return await res.json();
 };
 
-export const editIncome = async (data: IncomeData) => {
+export const user_edit_income = async (data: IncomeData) => {
 	const res = await fetch(apiUrls.income.modify, { method: 'PUT', body: JSON.stringify(data) });
 	return await res.json();
 };

@@ -7,7 +7,7 @@ import CardLoader from 'components/loader/card';
 
 import { formatCurrency } from 'lib/formatter';
 
-export default function ExpensesSummary() {
+export default function User_expense_summary() {
 	const user = useUser();
 	const { data = [], loading = true } = useData();
 
@@ -27,7 +27,7 @@ export default function ExpensesSummary() {
 							locale: user?.locale,
 						})}
 					/>
-					{/* <SummaryCard title="top spent category" data={formatCurrency({ value: 1 })} /> */}
+					{/* <SummaryCard of user title="top spent category" data={formatCurrency({ value: 1 })} /> */}
 				</div>
 			)}
 		</>

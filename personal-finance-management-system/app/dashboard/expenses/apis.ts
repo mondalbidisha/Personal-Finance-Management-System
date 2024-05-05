@@ -10,7 +10,7 @@ export type ExpenseData = {
 	id: string | null;
 };
 
-export const addExpense = async (data: ExpenseData) => {
+export const user_add_expense = async (data: ExpenseData) => {
 	const res = await fetch(apiUrls.expenses.add, { method: 'POST', body: JSON.stringify(data) });
 	if (!res.ok) {
 		const error = await res.json();
@@ -19,12 +19,12 @@ export const addExpense = async (data: ExpenseData) => {
 	return await res.json();
 };
 
-export const deleteExpense = async (id: string) => {
+export const user_del_expense = async (id: string) => {
 	const res = await fetch(apiUrls.expenses.modify, { method: 'DELETE', body: JSON.stringify({ id: [id] }) });
 	return await res.json();
 };
 
-export const editExpense = async (data: ExpenseData) => {
+export const user_edit_expense = async (data: ExpenseData) => {
 	const res = await fetch(apiUrls.expenses.modify, { method: 'PUT', body: JSON.stringify(data) });
 	return await res.json();
 };
