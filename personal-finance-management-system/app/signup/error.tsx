@@ -11,14 +11,13 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 
 	return (
 		<div>
-			<h2>Something went wrong!</h2>
+			<h2>There is an error in creating your account on PFMS! Please try again</h2>
 			<button
 				onClick={
-					// Attempt to recover by trying to re-render the segment
 					() => reset()
 				}
 			>
-				Try again
+				Try again!
 			</button>
 		</div>
 	);

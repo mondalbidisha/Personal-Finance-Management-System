@@ -7,7 +7,7 @@ import Footer from 'components/footer';
 
 import SignInForm from './form';
 
-export default function SignIn() {
+export default function user_signin() {
 	return (
 		<main
 			className={`relative m-auto flex h-[100vh] w-full flex-col items-center justify-center bg-gradient-to-br from-sky-100 via-white to-sky-50 pl-2 pr-2`}
@@ -34,7 +34,7 @@ export default function SignIn() {
 				<Link href="https://expense.fyi">
 					<h1 className="flex flex-col items-center text-3xl">
 						<Image className="active:scale-95" src={logo} width={50} height={50} alt="expense.fyi logo" />
-						<span className="mt-2 font-black text-gray-900">Expense.fyi</span>
+						<span className="mt-2 font-black text-gray-900">Your Personal Finance Management System: PFMS</span>
 					</h1>
 				</Link>
 				<p className="mb-6 mt-3 text-center text-sm font-medium text-zinc-600">

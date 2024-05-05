@@ -16,7 +16,7 @@ import url from 'constants/url';
 
 const initialState = { loading: false, email: '', success: false, error: '' };
 
-export default function Form() {
+export default function Signin_form() {
 	const [state, setState] = useState(initialState);
 	const inputElement = useRef<HTMLInputElement>(null);
 	const supabase = createClientComponentClient();
@@ -36,7 +36,7 @@ export default function Form() {
 		getUser();
 	}, [router, supabase.auth]);
 
-	const handleSignIn = async () => {
+	const signin_user = async () => {
 		setState((prev) => ({ ...prev, loading: true, error: '', success: false }));
 
 		try {
@@ -61,7 +61,7 @@ export default function Form() {
 			className="grid w-full grid-cols-1 items-center gap-4 text-gray-800"
 			onSubmit={(event) => {
 				event.preventDefault();
-				handleSignIn();
+				signin_user();
 			}}
 		>
 			<label className="mb-1 block">
@@ -72,7 +72,7 @@ export default function Form() {
 					inputMode="email"
 					autoComplete="email"
 					type="email"
-					placeholder="tim@apple.com"
+					placeholder="time@gmail.com"
 					required
 					value={state.email}
 					onChange={(event) => {
@@ -86,12 +86,12 @@ export default function Form() {
 			</Button>
 
 			<p className="text-center text-sm font-medium text-gray-700">
-				Don{"'"}t have an account?{' '}
+				Don't have an account?{' '}
 				<Link
 					href={url.app.signup}
 					className="border-b-[1px] border-gray-700 pb-[1px] font-bold hover:border-gray-500 hover:text-gray-600"
 				>
-					Sign up
+					Click here to Sign up
 				</Link>{' '}
 				for free.
 			</p>
@@ -102,7 +102,7 @@ export default function Form() {
 				}`}
 			>
 				{state.success && !state.error ? (
-					<span className="text-green-700">We just sent an email with magic link, check your inbox.</span>
+					<span className="text-green-700">Check your inbox for easy access to PFMS.</span>
 				) : null}
 
 				{!state.success && state.error ? <span className="text-red-500">{state.error}</span> : null}

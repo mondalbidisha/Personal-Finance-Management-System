@@ -34,11 +34,11 @@ export default function SignUp() {
 				<Link href="https://expense.fyi">
 					<h1 className="flex flex-col items-center text-3xl">
 						<Image className="active:scale-95" src={logo} width={50} height={50} alt="expense.fyi logo" />
-						<span className="mt-2 font-black text-gray-900">Expense.fyi</span>
+						<span className="mt-2 font-black text-gray-900">Your Personal Finance Management System: PFMS</span>
 					</h1>
 				</Link>
 				<p className="mb-6 mt-3 text-center text-sm font-medium text-zinc-600">
-					Get started for free. No credit card required.
+					Get started for free, no card information required!
 				</p>
 				<SignUpForm />
 			</div>

@@ -1,11 +1,11 @@
-const title = 'Sign up for Expense.fyi';
-const description = 'Effortlessly Track and Manage Expenses.';
+const title = 'Sign-up for PFMS';
+const description = 'Track and Manage your Expenses easily!';
 
 export const metadata = {
 	title,
 	description,
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Signup_layout({ children }: { children: React.ReactNode }) {
 	return <>{children}</>;
 }

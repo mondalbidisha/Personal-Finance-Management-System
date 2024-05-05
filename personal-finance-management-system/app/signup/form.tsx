@@ -13,7 +13,7 @@ import url from 'constants/url';
 
 const initialState = { loading: false, email: '', success: false, error: '' };
 
-export default function Form() {
+export default function Signup_form() {
 	const [state, setState] = useState(initialState);
 	const inputElement = useRef<HTMLInputElement>(null);
 
@@ -57,7 +57,7 @@ export default function Form() {
 					type="email"
 					inputMode="email"
 					autoComplete="email"
-					placeholder="tim@apple.com"
+					placeholder="time@gmail.com"
 					required
 					value={state.email}
 					onChange={(event) => {
@@ -67,16 +67,16 @@ export default function Form() {
 				/>
 			</label>
 			<Button size={'lg'} type="submit" disabled={state.loading}>
-				{state.loading ? <CircleLoader /> : 'Sign up here'}
+				{state.loading ? <CircleLoader /> : 'Click here to Sign-up'}
 			</Button>
 
 			<p className="text-center text-sm font-medium text-zinc-700">
-				Already registered?{' '}
+				Are you already registered on PFMS?{' '}
 				<Link
 					href={url.app.signin}
 					className="border-b-[1px] border-zinc-700 pb-[1px] font-bold hover:border-zinc-500 hover:text-zinc-600"
 				>
-					Sign in
+					Click here to login
 				</Link>{' '}
 				to your account.
 			</p>
@@ -87,7 +87,7 @@ export default function Form() {
 				}`}
 			>
 				{state.success && !state.error ? (
-					<span className="text-green-700">We just sent an email with magic link, check your inbox.</span>
+					<span className="text-green-700">Check your inbox for a link to get started with PFMS</span>
 				) : null}
 
 				{!state.success && state.error ? <span className="text-red-500">{state.error}</span> : null}
