@@ -6,7 +6,7 @@ import logo from 'public/icons/logo.svg';
 
 import Footer from 'components/footer';
 
-export default function Privacy() {
+export default function privacy_policy() {
 	return (
 		<div className="relative min-h-screen bg-gradient-to-br from-sky-100 via-white to-sky-50 pl-2 pr-2 leading-relaxed text-zinc-800">
 			<div className="relative m-auto h-[40px] max-w-4xl pt-3">
@@ -42,7 +42,7 @@ export default function Privacy() {
 					Privacy Policy
 				</h1>
 				<p className="mt-2">
-					Author built the <b>Expense.fyi</b> web application as a <b>Freemium app</b>. This SERVICE is provided by at
+					Author built the <b>PFMS</b> web application as a <b>Free app</b>. This SERVICE is provided by at
 					no cost and is intended for use as is.
 				</p>
 				<p className="mt-2">
@@ -50,32 +50,32 @@ export default function Privacy() {
 					Personal Information if anyone decided to use my Service.
 				</p>
 				<p className="mt-2">
-					If you choose to use my Service, then you agree to the collection and use of information in relation to this
-					policy. The Personal Information that I collect is used for providing and improving the Service. I will not
+					If you choose to use our Service, then you agree to the collection and use of information in relation to this
+					policy. The Personal Information that we collect is used for providing and improving the Service. We will not
 					use or share your information with anyone except as described in this Privacy Policy.
 				</p>
 				<p className="mt-2">
 					The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are
-					accessible at Expense.fyi unless otherwise defined in this Privacy Policy.
+					accessible at PFMS unless otherwise defined in this Privacy Policy.
 				</p>
 			</div>
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Information Collection and Use</h2>
 				<p className="mt-2">
-					For a better experience, while using our Service, I may require you to provide us with certain personally
-					identifiable information. The information that I request will be retained on your device and is not collected
-					by me in any way.
+					For a better experience, while using our Service, we may require you to provide us with certain personally
+					identifiable information. The information that we request will be retained on your device and is not collected
+					by our system in any way.
 				</p>
 			</div>
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Log Data</h2>
 				<p className="mt-2">
-					I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and
+					We want to inform you that whenever you our Service, in a case of an error in the app we collect data and
 					information (through third-party products) on your phone called Log Data.
 				</p>
 				<p className="mt-2">
 					This Log Data may include information such as your device Internet Protocol (“IP”) address, device name,
-					operating system version, the configuration of the app when utilizing my Service, the time and date of your
+					operating system version, the configuration of the app when utilizing our Service, the time and date of your
 					use of the Service, and other statistics.
 				</p>
 			</div>
@@ -85,16 +85,11 @@ export default function Privacy() {
 					Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These
 					are sent to your browser from the websites that you visit and are stored on your device{"'"}s internal memory.
 				</p>
-				<p className="mt-2">
-					This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries
-					that use “cookies” to collect information and improve their services. You have the option to either accept or
-					refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies,
-					you may not be able to use some portions of this Service.
-				</p>
+				
 			</div>
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Service Providers</h2>
-				<p className="mt-2">I may employ third-party companies and individuals due to the following reasons:</p>
+				<p className="mt-2">We may employ third-party companies and individuals due to the following reasons:</p>
 				<ul className="mt-4 list-disc pl-6">
 					<li className="pb-2">To facilitate our Service;</li>
 					<li className="pb-2">To provide the Service on our behalf;</li>
@@ -102,7 +97,7 @@ export default function Privacy() {
 					<li className="pb-2">To assist us in analyzing how our Service is used.</li>
 				</ul>
 				<p className="mt-2">
-					I want to inform users of this Service that these third parties have access to their Personal Information. The
+					We want to inform users of this Service that these third parties have access to their Personal Information. The
 					reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or
 					use the information for any other purpose.
 				</p>
@@ -110,9 +105,9 @@ export default function Privacy() {
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Security</h2>
 				<p className="mt-2">
-					I value your trust in providing us your Personal Information, thus we are striving to use commercially
+					We value your trust in providing us with your Personal Information, thus we are striving to use commercially
 					acceptable means of protecting it. But remember that no method of transmission over the internet, or method of
-					electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+					electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
 				</p>
 			</div>
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
@@ -122,18 +117,18 @@ export default function Privacy() {
 					that site. Note that these external sites are not operated by me.
 				</p>
 				<p className="mt-2">
-					Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and
+					Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and
 					assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
 				</p>
 			</div>
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Children{"'"}s Privacy</h2>
 				<p className="mt-2">
-					I do not knowingly collect personally identifiable information from children. I encourage all children to
+					We do not knowingly collect personally identifiable information from children. We encourage all children to
 					never submit any personally identifiable information through the Application and/or Services.
 				</p>
 				<p className="mt-2">
-					I encourage parents and legal guardians to monitor their children{"'"}s Internet usage and to help enforce
+					We encourage parents and legal guardians to monitor their children{"'"}s Internet usage and to help enforce
 					this Policy by instructing their children never to provide personally identifiable information through the
 					Application and/or Services without their permission. If you have reason to believe that a child has provided
 					personally identifiable information to us through the Application and/or Services, please contact us.
@@ -146,8 +141,8 @@ export default function Privacy() {
 			<div className="relative m-4 mt-3 max-w-3xl pt-3 sm:m-4 lg:m-auto">
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Changes to This Privacy Policy</h2>
 				<p className="mt-2">
-					I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for
-					any changes. I will notify you of any changes by posting the new Privacy Policy on this page. This policy is
+					We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for
+					any changes. We will notify you of any changes by posting the new Privacy Policy on this page. This policy is
 					effective as of 2023-01-01
 				</p>
 			</div>
@@ -155,8 +150,8 @@ export default function Privacy() {
 				<h2 className="mb-3 mt-2 text-2xl font-extrabold leading-6">Contact Us</h2>
 				<p className="mt-2">
 					If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at{' '}
-					<a className="border-b-[1px] border-black pb-[1px]" href="mailto:hello@expense.fyi.">
-						hello@expense.fyi.
+					<a className="border-b-[1px] border-black pb-[1px]" href="mailto:hello@pfms.com">
+						hello@pfms.com
 					</a>
 				</p>
 			</div>

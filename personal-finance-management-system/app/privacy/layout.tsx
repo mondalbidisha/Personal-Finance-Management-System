@@ -1,4 +1,4 @@
-const title = 'Expense.fyi – Privacy Policy';
+const title = 'Your Personal Finance Management Sysyem: PFMS – Privacy Policy';
 const description = 'Effortlessly Track and Manage Expenses.';
 
 export const metadata = {
