@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import DeleteModal from 'components/modal/delete';
+import CustomDeleteModal from 'components/modal/delete';
 import { Button } from 'components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from 'components/ui/card';
 
@@ -37,7 +37,7 @@ export default function DeleteAccount() {
 					</Button>
 				</CardFooter>
 			</Card>
-			<DeleteModal show={show} onHide={onHide} />
+			<CustomDeleteModal show={show} onHide={onHide} />
 		</>
 	);
 }
