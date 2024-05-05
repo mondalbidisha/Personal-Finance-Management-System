@@ -12,21 +12,23 @@ import { Input } from 'components/ui/input';
 
 import Modal from '.';
 
-export default function DeleteModal({ show, onHide }: { show: boolean; onHide: () => void }) {
+export default function CustomDeleteModal({ show, onHide }: { show: boolean; onHide: () => void }) {
 	const user = useUser();
 	const [loading, setLoading] = useState(false);
 	const [verify, setVerify] = useState('');
 	const supabase = createClientComponentClient();
 
-	const onDelete = async () => {
-		if (verify === user.email) {
-			setLoading(true);
-			await deleteUser();
-			setLoading(false);
-			await supabase.auth.signOut();
-			window.location.href = '/signup';
-		}
-	};
+	const onDelete = async () => 
+		{
+			if (verify === user.email) 
+				{
+					setLoading(true);
+					await deleteUser();
+					setLoading(false);
+					await supabase.auth.signOut();
+					window.location.href = '/signup';
+				}
+		};
 
 	return (
 		<Modal show={show} title="Delete Your Account" onHide={onHide} someRef={null}>

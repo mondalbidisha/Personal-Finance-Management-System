@@ -21,7 +21,8 @@ export default function Modal({ show, title, children, onHide, someRef }: ModalP
 
 	return (
 		<>
-			{isDesktop ? (
+			{isDesktop ? 
+			(
 				<Transition appear show={show} as={Fragment}>
 					<Dialog initialFocus={someRef} open={show} as="div" className={`relative z-20 `} onClose={onHide}>
 						<Transition.Child
@@ -66,16 +67,17 @@ export default function Modal({ show, title, children, onHide, someRef }: ModalP
 						</div>
 					</Dialog>
 				</Transition>
-			) : (
-				<Drawer open={show}>
-					<DrawerOverlay onClick={onHide} />
-					<DrawerContent className="text-primary">
-						<DrawerHeader className="text-left">
-							<DrawerTitle>{title}</DrawerTitle>
-						</DrawerHeader>
-						<div className="p-4 pt-0 pb-8">{children}</div>
-					</DrawerContent>
-				</Drawer>
+			) : 
+				(
+					<Drawer open={show}>
+						<DrawerOverlay onClick={onHide} />
+						<DrawerContent className="text-primary">
+							<DrawerHeader className="text-left">
+								<DrawerTitle>{title}</DrawerTitle>
+							</DrawerHeader>
+							<div className="p-4 pt-0 pb-8">{children}</div>
+						</DrawerContent>
+					</Drawer>
 			)}
 		</>
 	);
